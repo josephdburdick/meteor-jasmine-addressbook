@@ -1,24 +1,14 @@
-/* globals Player: true */
+/* globals AddresBook: true */
 
-// Player = function Player() {};
-
-// Player.prototype.play = function(song) {
-//   this.currentlyPlayingSong = song;
-//   this.isPlaying = true;
-// };
-
-// Player.prototype.pause = function() {
-//   this.isPlaying = false;
-// };
-
-// Player.prototype.resume = function() {
-//   if (this.isPlaying) {
-//     throw new Error('song is already playing');
-//   }
-
-//   this.isPlaying = true;
-// };
-
-// Player.prototype.makeFavorite = function() {
-//   this.currentlyPlayingSong.persistFavoriteStatus(true);
-// };
+AddressBook = function AddressBook(){
+  this.contacts = [];
+}
+AddressBook.prototype.addContact = function(contact){
+  this.contacts.push(contact);
+}
+AddressBook.prototype.getContact = function(index){
+  return this.contacts[index];
+}
+AddressBook.prototype.removeContact = function(index){
+  this.contacts.splice(index, 1);
+}
